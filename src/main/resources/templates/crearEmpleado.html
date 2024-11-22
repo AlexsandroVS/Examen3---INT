@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Empleado</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+<div class="container mx-auto p-6">
+  <h1 class="text-3xl font-bold text-center mb-6">Agregar Nuevo Empleado</h1>
+
+  <form action="/empleados/guardar" method="POST" class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+    <div class="mb-4">
+      <label for="nombre" class="block text-sm font-semibold text-gray-700">Nombre</label>
+      <input type="text" id="nombre" name="nombre" class="w-full mt-1 p-3 border border-gray-300 rounded-lg" required>
+    </div>
+    <div class="mb-4">
+      <label for="ocupacion" class="block text-sm font-semibold text-gray-700">Ocupación</label>
+      <input type="text" id="ocupacion" name="ocupacion" class="w-full mt-1 p-3 border border-gray-300 rounded-lg" required>
+    </div>
+    <div class="mb-4">
+      <label for="horasTrabajadas" class="block text-sm font-semibold text-gray-700">Horas Trabajadas</label>
+      <input type="number" id="horasTrabajadas" name="horasTrabajadas" step="any" class="w-full mt-1 p-3 border border-gray-300 rounded-lg" required>
+    </div>
+    <div class="mb-4">
+      <label for="pagoPorHora" class="block text-sm font-semibold text-gray-700">Pago por Hora</label>
+      <input type="number" id="pagoPorHora" name="pagoPorHora" step="any" class="w-full mt-1 p-3 border border-gray-300 rounded-lg" required>
+    </div>
+    <div class="flex justify-end">
+      <button type="submit" class="px-6 py-2 bg-green-500 text-white rounded hover:bg-green-600">Guardar Empleado</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>
